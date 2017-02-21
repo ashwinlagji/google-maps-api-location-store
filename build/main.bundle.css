@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  height: 100vh; }
+  body header {
+    background: grey; }
+  body .body {
+    display: flex;
+    flex-grow: 1; }
+    body .body .main-content {
+      flex-grow: 1; }
+    body .body .nav {
+      width: 180px;
+      order: -1; }
+    body .body .sidebar {
+      width: 180px;
+      order: 1; }
+  body footer {
+    background: grey; }
+
+@media (max-width: 800px) {
+  .body {
+    flex-direction: column; }
+    .body .nav, .body .sidebar {
+      width: auto; } }
+
+/*# sourceMappingURL=main.bundle.css.map*/

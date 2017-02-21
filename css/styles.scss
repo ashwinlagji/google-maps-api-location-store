@@ -1,0 +1,47 @@
+html,body{
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    top:0;
+    bottom: 0;
+    height: 100vh;
+    
+    header{
+        background: grey;
+    }
+
+    .body{
+        display: flex;
+        flex-grow: 1;
+        
+        .main-content{
+            flex-grow: 1;
+        }
+        .nav{
+            width: 180px;
+            order: -1;
+        }
+        .sidebar{
+            width: 180px;
+            order: 1;
+        }
+        
+    }
+ 
+    footer{
+        background: grey;
+    }
+}
+@media (max-width: 800px){
+    .body{
+        flex-direction: column;
+        
+        .nav,.sidebar{
+            width: auto;
+        }
+    }
+    
+}
