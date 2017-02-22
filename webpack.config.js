@@ -21,19 +21,12 @@ module.exports = {
                     presets: ['es2015']
                 }
             }
-        ],
+    ],
         rules: [{
-            test: /\.scss$/,
-            loader: extractSass.extract({
-                loader: [{
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader"
-                }],
-                // use style-loader in development
-                fallback: "style-loader"
-            })
-        }]
+                        test: /\.scss$/,
+                        use:  ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader']})
+            }]
+    
     },
     plugins:[extractSass]
     ,
