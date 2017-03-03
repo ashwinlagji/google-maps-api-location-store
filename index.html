@@ -13,79 +13,10 @@
             }
             document.write("<base href='/" + getContextPath() + "' />");
         </script>
-    
-        <style>
-            /* Always set the map height explicitly to define the size of the div
-            * element that contains the map. */
-            #map {
-                height: 100%;
-            }
-            /* Optional: Makes the sample page fill the window. */
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            #target {
-                width: 345px;
-            }
-
-            html, body, #map-canvas {
-                height: 100%;
-                margin: 0px;
-                padding: 0px
-            }
-
-            .controls {
-                margin-top: 16px;
-                border: 1px solid transparent;
-                border-radius: 2px 0 0 2px;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                height: 32px;
-                outline: none;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            }
-
-            #pac-input {
-                background-color: #fff;
-                padding: 0 11px 0 13px;
-                width: 400px;
-                font-family: Roboto;
-                font-size: 15px;
-                font-weight: 300;
-                text-overflow: ellipsis;
-                margin-left: 20px;
-            }
-
-            #pac-input:focus {
-                border-color: #4d90fe;
-                margin-left: -1px;
-                padding-left: 14px;  
-                width: 401px;
-            }
-
-            .pac-container {
-                font-family: Roboto;
-            }
-
-            #type-selector {
-                color: #fff;
-                background-color: #4d90fe;
-                padding: 5px 11px 0px 11px;
-            }
-
-            #type-selector label {
-                font-family: Roboto;
-                font-size: 13px;
-                font-weight: 300;
-            }
-
-        </style>
     </head>
     <body>
         <header>
-            GOOGLE MAPS API
+            <h3 class="page-header">GOOGLE MAPS API</h3>
         </header>
         <div class="body">
             <div class="main-content">
@@ -93,13 +24,22 @@
                 <input id="pac-input" class="controls">
             </div>
             <div class="nav">nav</div>
-            <div class="sidebar">sidebar</div>
-
+            <div class="sidebar">
+                <label>List of Implemented Func</label>
+                <ul>
+                    <li>Simple Map</li>
+                    <li>Marker</li>
+                    <li>Geo-location</li>
+                    <li>Search Place</li>
+                    <li>Info Window</li>
+                    <li></li>
+                </ul>           
+            </div>
         </div>
         <footer>
-            footer
+            <div>&copy; 2017</div>
         </footer>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmfnqBxAQEXjA_se-5d9B-mNYRahOvMRM&libraries=places"></script>
         <script type="text/javascript" src="/build/main.bundle.js"></script>     
 
     </body>

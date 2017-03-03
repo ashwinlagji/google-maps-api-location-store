@@ -1,3 +1,62 @@
+#map {
+  height: 100%; }
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+#target {
+  width: 345px; }
+
+html,
+body,
+#map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+.controls {
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+
+#pac-input {
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  width: 400px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  margin-left: 20px; }
+
+#pac-input:focus {
+  border-color: #4d90fe;
+  margin-left: -1px;
+  padding-left: 14px;
+  width: 401px; }
+
+.pac-container {
+  font-family: Roboto; }
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px; }
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300; }
+
 body {
   display: flex;
   flex-direction: column;
@@ -6,24 +65,57 @@ body {
   height: 100vh; }
   body header {
     background: grey; }
+    body header .page-header {
+      padding: 0 20px; }
   body .body {
     display: flex;
     flex-grow: 1; }
     body .body .main-content {
-      flex-grow: 1; }
+      flex-grow: 1;
+      margin: 5px;
+      border: 1px solid black;
+      -webkit-box-shadow: 0px 0px 29px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 29px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 29px 1px rgba(0, 0, 0, 0.75); }
     body .body .nav {
+      display: flex;
+      justify-content: center;
       width: 180px;
-      order: -1; }
+      order: -1;
+      background-color: silver; }
     body .body .sidebar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
       width: 180px;
-      order: 1; }
+      order: 1;
+      background-color: silver;
+      flex-direction: column; }
+      body .body .sidebar ul {
+        display: flex;
+        flex: 1;
+        flex-direction: column; }
+        body .body .sidebar ul li {
+          text-decoration: none; }
   body footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: grey; }
 
 @media (max-width: 800px) {
-  .body {
+  body .body {
+    display: flex;
     flex-direction: column; }
-    .body .nav, .body .sidebar {
-      width: auto; } }
+    body .body .nav,
+    body .body .sidebar {
+      width: auto; }
+    body .body .main-content {
+      display: flex;
+      flex-grow: 1; }
+      body .body .main-content #map-canvas {
+        position: static;
+        width: 100%;
+        height: 100%; } }
 
 /*# sourceMappingURL=main.bundle.css.map*/
